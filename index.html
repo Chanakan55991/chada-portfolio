@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=view-width, initial-scale=1" />
+    <link rel="stylesheet/less" type="text/css" href="/static/styles/index.less" />
+    <link rel="stylesheet" type="text/css" href="/static/styles/fullpage.min.css" />
+    <title>Suwichada - Portfolio</title>
+  </head>
+  <script src="https://cdn.jsdelivr.net/npm/less" ></script>
+  <body class="content">
+    <script src="https://unpkg.com/htmx.org@1.9.0"></script>
+
+    <header class="navbar">
+      <div class="navchild">
+        <nav class="navigation">
+          <a href="/">
+            <span style="padding-right: .5rem;" class="nav-title">
+              Suwichada
+            </span>
+          </a>
+          <div class="left menu">
+            <a style="padding-right: .3rem;">About</a>
+            <a style="padding-right: .3rem;">Info</a>
+            <a style="padding-right: .3rem;">Contact</a>
+          </div>
+          <div class="flex-spacing" />
+          <!-- right menu button -->
+        </nav>
+      </div>
+    </header>
+
+
+    <div id="fullpage">
+      <section class="masthead section">
+        <div class="card">
+          <div>
+            <img class="profile-img" width="200px" height="200px" style="object-fit: cover; border-radius: 100%;" src="/static/profile.jpg" />
+          </div>
+          <div>
+            <span class="text-big">Suwichada Kaewkamson</span>
+          </div>
+        </div>
+      </section>
+
+      <section class='bg-alt-1 section'>
+        <div class="inner">
+          <h1>About Me</h1>
+
+          <p>Hello, this is me, I am testing a paragraph just to see if this works, I am now typing a very long paragraph to check the whole thing, on how much it would exadn the pgrah , I cant tpye things abymore</p>
+        </div>
+      </section>
+
+      <section class='bg-alt-2 section'>
+        <div class="inner">
+          <h1>Please change this</h1>
+
+          <p>Hello again, chada, please change this, this website is so good, except you haven't put any content in yet, ok bye</p>
+        </div>
+      </section>
+
+      <section class='bg-alt-3 section'>
+        <div class="inner">
+          <h1>Please change this</h1>
+
+          <p>Hello again, chada, please change this, this website is so good, except you haven't put any content in yet, ok bye</p>
+        </div>
+      </section>
+
+      <section class='bg-alt-4 section'>
+        <div class="inner">
+          <h1>Please change this</h1>
+
+          <p>Hello again, chada, please change this, this website is so good, except you haven't put any content in yet, ok bye</p>
+        </div>
+      </section>
+
+      <section class='bg-alt-5 section'>
+        <div class="inner">
+          <h1>Please change this</h1>
+
+          <p>Hello again, chada, please change this, this website is so good, except you haven't put any content in yet, ok bye</p>
+        </div>
+      </section>
+
+      <section class='bg-alt-6 section'>
+        <div class="inner">
+          <h1>Please change this</h1>
+
+          <p>Hello again, chada, please change this, this website is so good, except you haven't put any content in yet, ok bye</p>
+        </div>
+      </section>
+
+      <section class='bg-alt-7 section'>
+        <div class="inner">
+          <h1>Please change this</h1>
+
+          <p>Hello again, chada, please change this, this website is so good, except you haven't put any content in yet, ok bye</p>
+        </div>
+      </section>
+
+      <section class='bg-alt-8 section'>
+        <div class="inner">
+          <h1>Please change this</h1>
+
+          <p>Hello again, chada, please change this, this website is so good, except you haven't put any content in yet, ok bye</p>
+        </div>
+      </section>
+
+      <section class='bg-alt-9 section'>
+        <div class="inner">
+          <h1>Please change this</h1>
+
+          <p>Hello again, chada, please change this, this website is so good, except you haven't put any content in yet, ok bye</p>
+        </div>
+      </section>
+
+      <section class='bg-alt-10 section'>
+        <div class="inner">
+          <h1>Please change this</h1>
+
+          <p>Hello again, chada, please change this, this website is so good, except you haven't put any content in yet, ok bye</p>
+        </div>
+      </section>
+
+
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="/static/js/fullpage.min.js"></script>
+    <script>
+    $(document).ready(function() {
+      $('#fullpage').fullpage({
+        //options here
+        autoScrolling:true,
+        scrollHorizontally: true,
+        licenseKey: 'gplv3-license',
+        navigation: true
+      });
+
+      //methods
+      $.fn.fullpage.setAllowScrolling(true);
+    });
+    </script>
+  </body>
+</html>
+
