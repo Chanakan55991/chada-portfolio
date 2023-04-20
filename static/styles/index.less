@@ -1,5 +1,5 @@
 html {
-	background-color: #fff;
+	background-color: #1cc;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	/* filter: invert(80%); /* dark */ 
 }
@@ -15,6 +15,35 @@ html {
 
 .flex-div {
 	flex: 1 1 0%;
+}
+
+.section{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
+}
+.section.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+#tbg-1 {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 100vw;
+	height: 100vh;
+}
+
+.front {
+	z-index: 10;
+	position: relative;
+}
+
+.white {
+	color: white;
 }
 
 .invert {
