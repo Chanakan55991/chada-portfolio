@@ -7,15 +7,16 @@
     <link rel="stylesheet/less" type="text/css" href="/static/styles/index.less" />
     <link rel="stylesheet" type="text/css" href="/static/styles/fullpage.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
     <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
 
     <script type="importmap">
     {
-    "imports": {
-    "three": "https://unpkg.com/three@0.151.3/build/three.module.js",
-    "three/addons/": "https://unpkg.com/three@0.151.3/examples/jsm/"
-    }
+      "imports": {
+        "three": "https://unpkg.com/three@0.151.3/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.151.3/examples/jsm/"
+      }
     }
     </script>
 
@@ -46,21 +47,31 @@ Suwichada
 -->
 
     <div id="fullpage">
-      <section class="masthead section">
+
+      <section class="masthead section" data-anchor='masthead'>
         <div class="card">
           <div>
             <img class="profile-img" width="200px" height="200px" style="object-fit: cover; border-radius: 100%;"
               src="/static/profile.jpg" />
           </div>
+          <div class="top-mast">
+            <span class="title">Welcome!</span>
+          </div>
           <div>
-            <span class="text-big">Suwichada Kaewkamson</span>
+            <span class="text-big">Suwichada Keawkamson</span>
           </div>
         </div>
       </section>
 
-      <section class='bg-alt-1 section'>
-        <canvas id="tbg-1"></canvas>
-        <div class="inner front white">
+      <section class='bg-alt-1 section' data-anchor='info'>
+
+                  <canvas id="tbg-1"></canvas>
+        <div class="inner front white f-center">
+
+          <div class="mr-16 img-about">
+            <img width=300 height=360 src="/static/info-me.jpg" />
+          </div>
+          <div>
           <h1>About Me</h1>
           <ul class="list">
             <li>ชื่อ: นางสาวสุวิชาดา แก้วคำสอน</li>
@@ -73,23 +84,169 @@ Suwichada
             <li>เกิดวันที่:6/12/2548</li>
           </ul>
         </div>
+          </div>
       </section>
 
-      <section class='bg-alt-2 section'>
-        <div class="inner">
-          <h1>Please change this</h1>
-
-          <p>Hello again, chada, please change this, this website is so good, except you haven't put any content in yet,
-            ok bye</p>
-        </div>
-      </section>
+        <section class='bg-alt-2 section' data-anchor="education">
+          <div class="inner">
+          <div class="box1">
+            <h1 class="text-pad-left">Education</h1>
+          </div>
+          <div class="box2">
+            <p class="text-big text-pad-left text-pad-top">มัธยมต้นเคยศึกษาอยู่ที่โรงเรียนน้ำยืนวิทยา เกรดที่จบออกมา GPAX: 3.82
+              มัธยมปลายเลือกที่จะเปลี่ยนสายการเรียนมาเป็นสายวิชาชีพที่ "โรงเรียนจิตรลดาวิชาชีพ สถาบันเทคโนโลยีจิตรลดา"  สาขาเทคโนโลยีสารสนเทศ ปัจจุบันศึกษาอยู่ในระดับชั้นปีที่ 3</p>
+          </div>
+          </div>
+        </section>
 
       <section class='bg-alt-3 section'>
         <div class="inner">
-          <h1>Please change this</h1>
 
-          <p>Hello again, chada, please change this, this website is so good, except you haven't put any content in yet,
-            ok bye</p>
+          <h1 class="white">Skills</h1>
+          <!-- start -->
+          <div class="row">
+	
+	<!--team-1-->
+	<div class="col-lg-4">
+	<div class="our-team-main">
+	
+	<div class="team-front">
+	<img src="http://placehold.it/110x110/9c27b0/fff?text=Dilip" class="img-fluid" />
+	<h3>Dilip Kevat</h3>
+	<p>Web Designer</p>
+	</div>
+	
+	<div class="team-back">
+	<span>
+	Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis 
+	natoque penatibus et magnis dis parturient montes,
+	Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis 
+	natoque.
+	</span>
+	</div>
+	
+	</div>
+	</div>
+  
+	<!--team-1-->
+	
+	<!--team-2-->
+	<div class="col-lg-4">
+	<div class="our-team-main">
+	
+	<div class="team-front">
+	<img src="http://placehold.it/110x110/336699/fff?text=Dilip" class="img-fluid" />
+	<h3>Dilip Kevat</h3>
+	<p>Web Designer</p>
+	</div>
+	
+	<div class="team-back">
+	<span>
+	Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis 
+	natoque penatibus et magnis dis parturient montes,
+	Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis 
+	natoque.
+	</span>
+	</div>
+	
+	</div>
+	</div>
+	<!--team-2-->
+	
+	<!--team-3-->
+	<div class="col-lg-4">
+	<div class="our-team-main">
+	
+	<div class="team-front">
+	<img src="http://placehold.it/110x110/607d8b/fff?text=Dilip" class="img-fluid" />
+	<h3>Dilip Kevat</h3>
+	<p>Web Designer</p>
+	</div>
+	
+	<div class="team-back">
+	<span>
+	Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis 
+	natoque penatibus et magnis dis parturient montes,
+	Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis 
+	natoque.
+	</span>
+	</div>
+	
+	</div>
+	</div>
+	<!--team-3-->
+	
+	<!--team-4-->
+	<div class="col-lg-4">
+	<div class="our-team-main">
+	
+	<div class="team-front">
+	<img src="http://placehold.it/110x110/4caf50/fff?text=Dilip" class="img-fluid" />
+	<h3>Dilip Kevat</h3>
+	<p>Web Designer</p>
+	</div>
+	
+	<div class="team-back">
+	<span>
+	Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis 
+	natoque penatibus et magnis dis parturient montes,
+	Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis 
+	natoque.
+	</span>
+	</div>
+	
+	</div>
+	</div>
+	<!--team-4-->
+	
+	<!--team-5-->
+	<div class="col-lg-4">
+	<div class="our-team-main">
+	
+	<div class="team-front">
+	<img src="http://placehold.it/110x110/e91e63/fff?text=Dilip" class="img-fluid" />
+	<h3>Dilip Kevat</h3>
+	<p>Web Designer</p>
+	</div>
+	
+	<div class="team-back">
+	<span>
+	Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis 
+	natoque penatibus et magnis dis parturient montes,
+	Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis 
+	natoque.
+	</span>
+	</div>
+	
+	</div>
+	</div>
+	<!--team-5-->
+	
+	<!--team-6-->
+	<div class="col-lg-4">
+	<div class="our-team-main">
+	
+	<div class="team-front">
+	<img src="http://placehold.it/110x110/2196f3/fff?text=Dilip" class="img-fluid" />
+	<h3>Dilip Kevat</h3>
+	<p>Web Designer</p>
+	</div>
+	
+	<div class="team-back">
+	<span>
+	Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis 
+	natoque penatibus et magnis dis parturient montes,
+	Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis 
+	natoque.
+	</span>
+	</div>
+	
+	</div>
+	</div>
+	<!--team-6-->
+	
+	
+	</div>
         </div>
       </section>
 
@@ -130,51 +287,42 @@ Suwichada
       </section>
 
       <section class='bg-alt-8 section'>
-        <div class="inner">
-          <h1>Please change this</h1>
-
-          <p>Hello again, chada, please change this, this website is so good, except you haven't put any content in yet,
-            ok bye</p>
+        <div class="inner front white flex-side">
+          <div class="mr-16 img-about">
+            <img width=440 height=300 src="/static/info-me.jpg" />
+          </div>
+          <div>
+          <h1>Certificates Retrieved</h1>
+          <ul class="list">
+            <li>ชื่อ: นางสาวสุวิชาดา แก้วคำสอน</li>
+            <li>ชื่อเล่น:ชาดา</li>
+            <li>ชื่อภาษาอังกฤษ:Suwichada Keawkamson</li>
+            <li>ชื่อเล่นภาษาอังกฤษ:Chada</li>
+            <li>ศาสนา:พุทธ</li>
+            <li>สัญชาติ:ไทย</li>
+            <li>กรุ๊ปเลือด:O</li>
+            <li>เกิดวันที่:6/12/2548</li>
+          </ul>
         </div>
+          </div>
+
       </section>
 
       <section class='bg-alt-9 section'>
         <div class="inner">
-          <h1>Please change this</h1>
+          <h1 class="text-bigger">Thank you for visiting my website</h1>
 
-          <p>Hello again, chada, please change this, this website is so good, except you haven't put any content in yet,
-            ok bye</p>
+          <p class="text-big">Hope you have a lovely day ahead, thanks again!</p>
         </div>
       </section>
-
-      <section class='bg-alt-10 section'>
-        <div class="inner">
-          <h1>Please change this</h1>
-
-          <p>Hello again, chada, please change this, this website is so good, except you haven't put any content in yet,
-            ok bye</p>
-        </div>
-      </section>
-
-
 
     </div>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"
     integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script src="/static/js/fullpage.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script>
-    $(document).ready(function () {
-      $('#fullpage').fullpage({
-        //options here
-        autoScrolling: true,
-        scrollHorizontally: true,
-        licenseKey: 'gplv3-license'
-      });
-
-      //methods
-      $.fn.fullpage.setAllowScrolling(true);
-    });
     </script>
     <script type="module" src="/static/js/main.js"></script>
   </body>

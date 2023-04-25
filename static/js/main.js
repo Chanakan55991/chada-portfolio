@@ -2,8 +2,13 @@ import * as THREE from 'https://unpkg.com/three@0.151.3/build/three.module.js'
 import { OrbitControls } from 'https://unpkg.com/three@0.138.0/examples/jsm/controls/OrbitControls.js'
 
 const notyf = new Notyf()
-
 const scene = new THREE.Scene()
+let currentPage
+
+const afterLoad = (origin, destination, direction, trigger) => {
+  currentPage = destination.anchor
+}
+
 
 function easeOutCirc(x) {
   return Math.sqrt(1 - Math.pow(x - 1, 4))
@@ -14,6 +19,7 @@ const initialCameraPosition = new THREE.Vector3(
   10,
   50 * Math.cos(0.2 * Math.PI)
 )
+
 
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
 const renderer = new THREE.WebGLRenderer({
@@ -31,9 +37,10 @@ const geometry = new THREE.TorusGeometry(10, 3, 16, 100)
 const mat = new THREE.MeshStandardMaterial({
   color: 0xFF6347
 })
-const torus = new THREE.Mesh(geometry, mat)
 
-const ambientLight = new THREE.AmbientLight(0xccccccc, 1)
+// const torus = new THREE.Mesh(geometry, mat)
+
+const ambientLight = new THREE.AmbientLight(0xffffffff, 1)
 scene.add(ambientLight)
 
 const controls = new OrbitControls(camera, renderer.domElement)
@@ -46,19 +53,30 @@ const star = () => {
   const material = new THREE.MeshStandardMaterial({ color: 0xFFFFFFFF })
   const star = new THREE.Mesh(geometry, material)
 
-  const [x, y, z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(300))
+  const [x, y, z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(200))
 
   star.position.set(x, y, z)
   scene.add(star)
+  return star
 }
 
-let stars = Array(300).fill().forEach(star)
+// const spaceTex = new THREE.TextureLoader().load('/static/space.jpg')
+scene.background = new THREE.Color(0x7D8CC4)
 
 let frame = 0
+let rendered = false
+let stars
 
 const render = () => {
   requestAnimationFrame(render)
 
+  if (currentPage === 'info' && !rendered) {
+    stars = Array(300).fill().map(star)
+    rendered = true
+  } else if (currentPage !== 'info' && rendered) {
+    rendered = false
+    stars.forEach((star) => scene.remove(star))
+  }
   frame = frame <= 100 ? frame + 1 : frame
 
   if (frame <= 100) {
@@ -75,13 +93,27 @@ const render = () => {
     controls.update()
   }
 
-  torus.rotateX(0.01)
-  torus.rotateY(0.01)
-  torus.rotateZ(0.01)
   renderer.render(scene, camera)
 }
 
 render()
 
+
+$(document).ready(function() {
+  $('#fullpage').fullpage({
+    //options here
+    autoScrolling: true,
+    scrollHorizontally: true,
+    licenseKey: 'gplv3-license',
+    afterLoad: afterLoad,
+    navigation: true
+  });
+
+  //methods
+  $.fn.fullpage.setAllowScrolling(true);
+});
+
+
 notyf.success('yo mf')
+
 
